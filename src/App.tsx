@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage/HomePage';
+import Layout from './components/Layout/Layout';
+import { Suspense } from 'react';
+import { NotesPage } from './pages/NotesPage';
+import Loader from './components/Loader';
+import PokePage from './pages/PokePage/PokePage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Layout>
+                <Suspense fallback={<Loader className="flex justify-center pt-10" />}>
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/notes" element={<NotesPage />} />
+                        <Route path="/poke" element={<PokePage />} />
+                    </Routes>
+                </Suspense>
+            </Layout>
+        </>
+    );
 }
 
 export default App;
