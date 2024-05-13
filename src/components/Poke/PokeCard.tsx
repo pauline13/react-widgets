@@ -2,19 +2,28 @@ import React from 'react';
 import PokeInfo from './PokeInfo';
 
 // @ts-ignore
-const PokeCard = () => {
+const PokeCard = ({ pokemon, loading, infoPoke }) => {
     return (
         <>
-            {'' ? (
-                <p>loading...</p>
+            {loading ? (
+                <p>loading the pokemon...</p>
             ) : (
                 // @ts-ignore
-
-                <div className="flex items-center mb-4 justify-between box-border w-[250px] shadow-md rounded-xl p-4 bg-blue-200">
-                    <p>id</p>
-                    <img src="" alt="poke img" />
-                    <p>name</p>
-                </div>
+                pokemon.map(poke => (
+                    <div
+                        key={poke.id}
+                        // @ts-ignore
+                        onClick={() => {
+                            console.log('POKE:', poke);
+                            infoPoke(poke);
+                        }}
+                        className="flex items-center mb-4 justify-between box-border w-[250px] shadow-md rounded-xl p-4 bg-blue-200"
+                    >
+                        <p>{poke.id}</p>
+                        <img src={poke.sprites.front_default} alt="poke img" />
+                        <p>{poke.name}</p>
+                    </div>
+                ))
             )}
         </>
     );
