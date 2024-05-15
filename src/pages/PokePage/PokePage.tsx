@@ -1,18 +1,12 @@
-import React from 'react';
-import PokeCard from '../../components/Poke/PokeCard';
 import PokeMain from '../../components/Poke/PokeMain';
 
 const PokePage = () => {
     return (
-        <div className="">
-            Pokemons
+        <div>
+            <p className="text-xl">Pokemon Page</p>
             <PokeMain />
         </div>
     );
 };
 
 export default PokePage;
-
-// сделать запрос к REST API, получить конкретного покемона
-// вывести в лист список покемонов (5-10 шт)
-// отфильтровать по алфавиту список покемонов

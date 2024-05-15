@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import Button, { ButtonTheme } from './Button';
 
-// interface formProps {
-//     title: string;
-//     // handleClick: () => ();
-// }
+interface formProps {
+    title: string;
+    handleClick: (email: string, password: string) => void;
+}
 
-//@ts-ignore
-const Form = ({ title, handleClick }) => {
+const Form = ({ title, handleClick }: formProps) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
