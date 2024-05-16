@@ -30,7 +30,7 @@ export const noteSlice = createSlice({
             if (action.payload.content.length >= 10) {
                 state.error = '';
                 state.notes = [...state.notes, action.payload];
-                localStorage.setItem(NOTE_LOCALSTORAGE_KEY, JSON.stringify(state.notes)); // Сохраняем заметки в localStorage
+                localStorage.setItem(NOTE_LOCALSTORAGE_KEY, JSON.stringify(state.notes));
             } else {
                 state.error = 'Мало символов';
             }
@@ -39,7 +39,7 @@ export const noteSlice = createSlice({
             state.isLoading = false;
             state.error = '';
             state.notes = state.notes.filter(note => note.id !== action.payload);
-            localStorage.setItem(NOTE_LOCALSTORAGE_KEY, JSON.stringify(state.notes)); // Обновляем заметки в localStorage
+            localStorage.setItem(NOTE_LOCALSTORAGE_KEY, JSON.stringify(state.notes));
         },
         errorNote(state, action: PayloadAction<string>) {
             state.isLoading = false;

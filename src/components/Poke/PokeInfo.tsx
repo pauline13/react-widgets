@@ -6,7 +6,7 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
             {data ? (
                 <>
                     <div className="flex flex-col fixed items-center w-[300px] p-4 bg-blue-200 rounded-xl shadow-md">
-                        <p className="mb-4 text-xl">{data.name}</p>
+                        <p className="mb-4 text-xl font-bold uppercase">{data.name}</p>
                         <img
                             className="w-[150px] h-[150px]"
                             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
@@ -25,9 +25,9 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
                             {data.stats.map(poke => {
                                 return (
                                     <div key={poke.stat.name}>
-                                        <p className="">
+                                        <p>
                                             {poke.stat.name}:
-                                            <span className="pl-2">{poke.base_stat}</span>
+                                            <span className="pl-1">{poke.base_stat}</span>
                                         </p>
                                     </div>
                                 );

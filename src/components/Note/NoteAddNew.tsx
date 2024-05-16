@@ -55,21 +55,6 @@ const NoteAddNew = () => {
                     {priority}
                 </div>
             ))}
-            {/* <input
-                type="checkbox"
-                checked={tagPriority === TagType.LOW_PRIORITY}
-                onChange={() => handleTagPriority(TagType.LOW_PRIORITY)}
-            />
-            <input
-                type="checkbox"
-                checked={tagPriority === TagType.MEDIUM_PRIORITY}
-                onChange={() => handleTagPriority(TagType.MEDIUM_PRIORITY)}
-            />
-            <input
-                type="checkbox"
-                checked={tagPriority === TagType.HIGH_PRIORITY}
-                onChange={() => handleTagPriority(TagType.HIGH_PRIORITY)}
-            /> */}
             {error && <span className="pt-1 text-xs text-red-500">{error}</span>}
 
             <Button
