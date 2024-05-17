@@ -1,7 +1,7 @@
 import Button, { ButtonTheme } from '../Button';
 import Input from '../Input';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { INote } from '../../models/INote';
+import { INote } from '../../types/INote';
 import { noteActions } from '../../store/reducers/NoteSlice';
 import { useState } from 'react';
 import { TagType } from '../Tags/Tag';
@@ -10,7 +10,7 @@ const NoteAddNew = () => {
     const { addNote } = noteActions;
     const dispatch = useAppDispatch();
 
-    const error = useAppSelector(state => state.noteReducer.error);
+    const error = useAppSelector((state) => state.noteReducer.error);
 
     const [note, setNote] = useState('');
     const [tagPriority, setTagPriority] = useState(TagType.LOW_PRIORITY);
@@ -44,7 +44,7 @@ const NoteAddNew = () => {
                 value={note}
                 onChange={handleNoteChange}
             />
-            {Object.values(TagType).map(priority => (
+            {Object.values(TagType).map((priority) => (
                 <div key={priority} className="pt-1">
                     <input
                         className="mr-2"

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PokeCard from './PokeCard';
 import axios from 'axios';
 import PokeInfo from './PokeInfo';
 import Button, { ButtonSize, ButtonTheme } from '../Button';
-import { PokeApiResponse, Pokemon } from './models/types/pokeTypes';
+import { PokeApiResponse, Pokemon } from '../../types/pokeTypes';
 
 const PokeMain = () => {
     const [pokeData, setPokeData] = useState<Pokemon[]>([]);
@@ -26,9 +26,9 @@ const PokeMain = () => {
 
     const getOnePoke = async (res: PokeApiResponse['results']) => {
         setLoading(true);
-        res.map(async poke => {
+        res.map(async (poke) => {
             const result = await axios.get<Pokemon>(poke.url);
-            setPokeData(state => {
+            setPokeData((state) => {
                 state = [...state, result.data];
                 state.sort((a, b) => (a.id > b.id ? 1 : -1));
                 return state;
@@ -48,7 +48,7 @@ const PokeMain = () => {
 
     useEffect(() => {
         getPokeFunc();
-    }, [url]); //
+    }, [url]);
 
     return (
         <div className="flex mt-4 gap-12">
@@ -58,7 +58,7 @@ const PokeMain = () => {
                         className="text-lg"
                         pokemon={pokeData}
                         loading={loading}
-                        infoPoke={poke => setPokeInfo(poke)}
+                        infoPoke={(poke) => setPokeInfo(poke)}
                     />
                 </div>
                 <div className="flex mt-5 gap-2">

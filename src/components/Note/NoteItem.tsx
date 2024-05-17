@@ -1,6 +1,6 @@
 import Button, { ButtonSize, ButtonTheme } from '../Button';
 import { Icon } from '../Icon';
-import { INote } from '../../models/INote';
+import { INote } from '../../types/INote';
 import { removeNote } from '../../store/reducers/NoteAction';
 import { useAppDispatch } from '../../hooks/redux';
 import Tag from '../Tags/Tag';

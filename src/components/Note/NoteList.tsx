@@ -1,4 +1,4 @@
-import { INote } from '../../models/INote';
+import { INote } from '../../types/INote';
 import NoteItem from './NoteItem';
 
 interface NoteListProps {

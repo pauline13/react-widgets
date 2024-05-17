@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { INote } from '../../models/INote';
+import { INote } from '../../types/INote';
 import { loadNotesFromLocalStorage } from './NoteAction';
 import { TagType } from '../../components/Tags/Tag';
 
@@ -38,7 +38,7 @@ export const noteSlice = createSlice({
         removeNote(state, action: PayloadAction<number>) {
             state.isLoading = false;
             state.error = '';
-            state.notes = state.notes.filter(note => note.id !== action.payload);
+            state.notes = state.notes.filter((note) => note.id !== action.payload);
             localStorage.setItem(NOTE_LOCALSTORAGE_KEY, JSON.stringify(state.notes));
         },
         errorNote(state, action: PayloadAction<string>) {
@@ -51,7 +51,7 @@ export const noteSlice = createSlice({
             state.error = '';
 
             const { noteId, tag } = action.payload;
-            const noteToUpdate = state.notes.find(note => note.id === noteId);
+            const noteToUpdate = state.notes.find((note) => note.id === noteId);
             if (noteToUpdate) {
                 if (!noteToUpdate.tags) {
                     noteToUpdate.tags = [];
@@ -73,10 +73,10 @@ export const noteSlice = createSlice({
             state.error = '';
 
             const { noteId, tag } = action.payload;
-            const noteToUpdate = state.notes.find(note => note.id === noteId);
+            const noteToUpdate = state.notes.find((note) => note.id === noteId);
             if (noteToUpdate && noteToUpdate.tags) {
                 noteToUpdate.tags = noteToUpdate.tags.filter(
-                    existingTag => existingTag !== tag,
+                    (existingTag) => existingTag !== tag,
                 );
                 localStorage.setItem(NOTE_LOCALSTORAGE_KEY, JSON.stringify(state.notes));
             }

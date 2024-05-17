@@ -1,5 +1,5 @@
 import Loader from '../Loader';
-import { PokeCardProps } from './models/types/pokeTypes';
+import { PokeCardProps } from '../../types/pokeTypes';
 
 const PokeCard = ({ pokemon, loading, infoPoke, className }: PokeCardProps) => {
     return (
@@ -7,7 +7,7 @@ const PokeCard = ({ pokemon, loading, infoPoke, className }: PokeCardProps) => {
             {loading ? (
                 <Loader />
             ) : (
-                pokemon.map(poke => (
+                pokemon.map((poke) => (
                     <div
                         key={poke.name}
                         onClick={() => {

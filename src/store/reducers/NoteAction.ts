@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-import { INote } from '../../models/INote';
+import { INote } from '../../types/INote';
 import { TagType } from '../../components/Tags/Tag';
 
 export const loadNotes = createAction('note/loadNotes');
