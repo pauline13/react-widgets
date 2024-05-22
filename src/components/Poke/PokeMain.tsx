@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import PokeCard from './PokeCard';
 import axios from 'axios';
 import PokeInfo from './PokeInfo';
@@ -15,14 +15,14 @@ const PokeMain = () => {
 
     const [pokeInfo, setPokeInfo] = useState<Pokemon | null>();
 
-    const getPokeFunc = async () => {
+    const getPokeFunc = useCallback(async () => {
         setLoading(true);
         const res = await axios.get<PokeApiResponse>(url);
         setNextUrl(res.data.next);
         setPrevUrl(res.data.previous);
         getOnePoke(res.data.results);
         setLoading(false);
-    };
+    }, [url]);
 
     const getOnePoke = async (res: PokeApiResponse['results']) => {
         setLoading(true);
@@ -38,17 +38,21 @@ const PokeMain = () => {
 
     const getPrevPage = () => {
         setPokeData([]);
-        setUrl(prevUrl!);
+        if (prevUrl !== undefined) {
+            setUrl(prevUrl);
+        }
     };
 
     const getNextPage = () => {
         setPokeData([]);
-        setUrl(nextUrl!);
+        if (nextUrl !== undefined) {
+            setUrl(nextUrl);
+        }
     };
 
     useEffect(() => {
         getPokeFunc();
-    }, [url]);
+    }, [getPokeFunc]);
 
     return (
         <div className="flex mt-4 gap-12">

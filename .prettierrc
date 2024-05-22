@@ -8,5 +8,11 @@
     "printWidth": 90,
     "tabWidth": 4,
     "arrowParens": "always",
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": ["*.ts", "*.js", "*.tsx", "*.jsx"],
+            "options": { "trailingComma": "all" }
+        }
+    ]
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button, { ButtonTheme } from './Button';
 
 interface formProps {

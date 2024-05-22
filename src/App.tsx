@@ -3,7 +3,7 @@ import Layout from './components/Layout/Layout';
 import { Suspense } from 'react';
 import { NotesPage } from './pages/NotesPage';
 import Loader from './components/Loader';
-import PokePage from './pages/PokePage/PokePage';
+import PokePage from './pages/PokePage/ui/PokePage';
 import HomePage from './pages/HomePage/HomePage';
 
 function App() {
