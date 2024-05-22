@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { INote } from '../../types/INote';
 import { noteActions } from '../../store/reducers/NoteSlice';
 import { useState } from 'react';
-import { TagType } from '../Tags/Tag';
+import { TagType, TagTypeText } from '../Tags/Tag';
 
 const NoteAddNew = () => {
     const { addNote } = noteActions;
@@ -37,22 +37,24 @@ const NoteAddNew = () => {
     };
 
     return (
-        <div className="max-w-[288px] min-w-[250px]">
+        <div className="max-w-[288px] min-w-[250px] mb-4">
             <Input
                 title="Новая заметка"
                 placeholder="Введите описание заметки"
                 value={note}
                 onChange={handleNoteChange}
             />
-            {Object.values(TagType).map((priority) => (
+            <p>Установите приоритет задачи</p>
+            {Object.values(TagType).map((priority: TagType) => (
                 <div key={priority} className="pt-1">
                     <input
-                        className="mr-2"
+                        className="mr-2 "
                         type="checkbox"
+                        id={priority}
                         checked={tagPriority === priority}
                         onChange={() => handleTagPriority(priority)}
                     />
-                    {priority}
+                    <label htmlFor={priority}>{TagTypeText[priority]}</label>
                 </div>
             ))}
             {error && <span className="pt-1 text-xs text-red-500">{error}</span>}
@@ -60,7 +62,7 @@ const NoteAddNew = () => {
             <Button
                 onClick={handleAddNote}
                 theme={ButtonTheme.ADD}
-                className="w-full mt-2 mb-4"
+                className="w-full mt-2"
             >
                 Добавить
             </Button>

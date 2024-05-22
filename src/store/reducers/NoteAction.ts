@@ -7,12 +7,14 @@ export const addNote = createAction<INote>('note/addNote');
 export const removeNote = createAction<number>('note/removeNote');
 export const errorNote = createAction<string>('note/errorNote');
 
-export const addTagToNote = createAction<{ noteId: number; tag: TagType }>(
-    'note/addTagToNote',
-);
-export const removeTagFromNote = createAction<{ noteId: number; tag: TagType }>(
-    'note/removeTagFromNote',
-);
+export const addTagToNote = createAction<{
+    noteId: number;
+    tag: TagType;
+}>('note/addTagToNote');
+export const removeTagFromNote = createAction<{
+    noteId: number;
+    tag: TagType;
+}>('note/removeTagFromNote');
 
 export const loadNotesFromLocalStorage = (): INote[] | undefined => {
     try {

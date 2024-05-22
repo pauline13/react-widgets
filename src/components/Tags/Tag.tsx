@@ -10,16 +10,16 @@ const tagColors = {
     [TagType.LOW_PRIORITY]: 'bg-green-500',
 };
 
-export enum TagTypeText {
-    HIGH = 'High',
-    MEDIUM = 'Medium',
-    LOW = 'Low',
-}
+export const TagTypeText = {
+    [TagType.HIGH_PRIORITY]: 'High',
+    [TagType.MEDIUM_PRIORITY]: 'Medium',
+    [TagType.LOW_PRIORITY]: 'Low',
+};
 
 interface TagProps {
     className?: string;
     color: TagType;
-    text?: TagTypeText;
+    text?: keyof typeof TagTypeText;
 }
 
 const Tag = ({ className, color, text }: TagProps) => {
