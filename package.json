@@ -12,6 +12,7 @@
         "@types/react": "^18.2.43",
         "@types/react-dom": "^18.2.17",
         "axios": "^1.6.7",
+        "framer-motion": "^11.2.6",
         "material-icons": "^1.13.12",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

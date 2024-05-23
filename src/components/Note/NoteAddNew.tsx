@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { INote } from '../../types/INote';
 import { noteActions } from '../../store/reducers/NoteSlice';
 import { useState } from 'react';
-import { TagType, TagTypeText } from '../Tags/Tag';
+import { TagType, TagTypeText } from '../Tag';
 
 const NoteAddNew = () => {
     const { addNote } = noteActions;
@@ -28,6 +28,7 @@ const NoteAddNew = () => {
 
         dispatch(addNote(newNote));
         setNote('');
+        setTagPriority(TagType.LOW_PRIORITY);
     };
 
     const handleTagPriority = (priority: TagType) => {

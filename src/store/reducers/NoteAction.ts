@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 import { INote } from '../../types/INote';
-import { TagType } from '../../components/Tags/Tag';
+import { TagType } from '../../components/Tag';
 
 export const loadNotes = createAction('note/loadNotes');
 export const addNote = createAction<INote>('note/addNote');
