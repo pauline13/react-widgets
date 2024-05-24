@@ -1,4 +1,4 @@
-import PokeMain from '../../../components/Poke/PokeMain';
+import PokeMain from '../../../features/pokemons/ui/PokeMain';
 
 const PokePage = () => {
     return (

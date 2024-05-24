@@ -1,6 +1,6 @@
 import { useAppSelector } from '../../../hooks/redux';
-import NoteAddNew from '../../../components/Note/NoteAddNew';
-import NoteList from '../../../components/Note/NoteList';
+import NoteAddNew from '../../../features/notes/ui/NoteAddNew';
+import NoteList from '../../../features/notes/ui/NoteList';
 
 const NotesPage = () => {
     const { notes } = useAppSelector((state) => state.noteReducer);

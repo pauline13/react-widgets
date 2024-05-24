@@ -1,11 +1,11 @@
-import Button, { ButtonSize, ButtonTheme } from '../Button';
-import { Icon } from '../Icon';
-import { INote } from '../../types/INote';
-import { removeNote } from '../../store/reducers/NoteAction';
-import { useAppDispatch } from '../../hooks/redux';
-import Tag from '../Tag';
+import Button, { ButtonSize, ButtonTheme } from '../../../shared/ui/Button/Button';
+import { Icon } from '../../../shared/ui/Icon/Icon';
+import { INote } from '../../../types/INote';
+import { removeNote } from '../model/NoteAction';
+import { useAppDispatch } from '../../../hooks/redux';
+import Tag from '../../../shared/ui/Tag/Tag';
 import { Reorder, useDragControls } from 'framer-motion';
-import ReorderIcon from '../ReorderIcon';
+import ReorderIcon from '../../../shared/ui/Icon/ReorderIcon';
 
 interface NoteItemProps {
     note: INote;

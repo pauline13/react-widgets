@@ -1,4 +1,4 @@
-import { TagType } from '../components/Tag';
+import { TagType } from '../../../shared/ui/Tag/Tag';
 
 export interface INote {
     id: number;

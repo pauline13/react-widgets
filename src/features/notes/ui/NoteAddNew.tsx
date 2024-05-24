@@ -1,10 +1,10 @@
-import Button, { ButtonTheme } from '../Button';
-import Input from '../Input';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { INote } from '../../types/INote';
-import { noteActions } from '../../store/reducers/NoteSlice';
+import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import { noteActions } from '../model/NoteSlice';
 import { useState } from 'react';
-import { TagType, TagTypeText } from '../Tag';
+import { TagType, TagTypeText } from '../../../shared/ui/Tag/Tag';
+import Input from '../../../shared/ui/Input/Input';
+import { INote } from '../model/types';
 
 const NoteAddNew = () => {
     const { addNote } = noteActions;

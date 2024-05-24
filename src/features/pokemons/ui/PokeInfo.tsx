@@ -1,4 +1,4 @@
-import { PokeInfoProps } from '../../types/pokeTypes';
+import { PokeInfoProps } from '../model/types';
 
 const PokeInfo = ({ data }: PokeInfoProps) => {
     return (

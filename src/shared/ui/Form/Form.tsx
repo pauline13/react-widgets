@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button, { ButtonTheme } from './Button';
+import Button, { ButtonTheme } from '../Button/Button';
 
 interface formProps {
     title: string;

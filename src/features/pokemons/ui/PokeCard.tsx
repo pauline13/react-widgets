@@ -1,5 +1,5 @@
-import Loader from '../Loader';
-import { PokeCardProps } from '../../types/pokeTypes';
+import Loader from '../../../shared/ui/Loader/Loader';
+import { PokeCardProps } from '../model/types';
 
 const PokeCard = ({ pokemon, loading, infoPoke, className }: PokeCardProps) => {
     return (

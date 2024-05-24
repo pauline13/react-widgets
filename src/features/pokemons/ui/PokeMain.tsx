@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
-import PokeCard from './PokeCard';
 import axios from 'axios';
+import { useState, useCallback, useEffect } from 'react';
+import Button, { ButtonTheme, ButtonSize } from '../../../shared/ui/Button/Button';
+import { Pokemon, PokeApiResponse } from '../model/types';
+import PokeCard from './PokeCard';
 import PokeInfo from './PokeInfo';
-import Button, { ButtonSize, ButtonTheme } from '../Button';
-import { PokeApiResponse, Pokemon } from '../../types/pokeTypes';
 
 const PokeMain = () => {
     const [pokeData, setPokeData] = useState<Pokemon[]>([]);
