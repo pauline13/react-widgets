@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { RoutePath } from '../shared/routeConfig/routeConfig';
+import { RoutePath } from '../../../shared/routeConfig/routeConfig';
 
 const Navbar = () => {
     return (

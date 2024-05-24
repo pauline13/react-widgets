@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { INote } from '../../../types/INote';
 import { loadNotesFromLocalStorage } from './NoteAction';
 import { TagType } from '../../../shared/ui/Tag/Tag';
+import { INote } from './types';
 
 interface NoteState {
     notes: INote[];

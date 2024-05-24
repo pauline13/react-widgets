@@ -1,4 +1,4 @@
-import Layout from '../widgets/Layout';
+import Layout from '../widgets/Layout/ui/Layout';
 import { AppRouter } from './router/ui';
 
 function App() {

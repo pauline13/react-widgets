@@ -1,7 +1,7 @@
 import { Reorder } from 'framer-motion';
-import { INote } from '../../../types/INote';
 import NoteItem from './NoteItem';
 import { useEffect, useState } from 'react';
+import { INote } from '../model/types';
 
 interface NoteListProps {
     notes: INote[];

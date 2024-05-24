@@ -2,6 +2,7 @@ import { RouteProps } from 'react-router-dom';
 import HomePage from '../../pages/HomePage/HomePage';
 import { NotesPage } from '../../pages/NotesPage';
 import { PokePage } from '../../pages/PokePage';
+import PageError from '../../widgets/PageError/ui/PageError';
 
 export enum AppRoutes {
     HOME = 'home',
@@ -31,7 +32,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         element: <PokePage />,
     },
     [AppRoutes.NO_FOUND]: {
-        path: RoutePath.home,
-        element: <HomePage />,
+        path: RoutePath.no_found,
+        element: <PageError />,
     },
 };
