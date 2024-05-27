@@ -1,0 +1,21 @@
+.light {
+    --color-layout: #e3e0da;
+    --color-bg: #ffffff;
+    --color-text: #171717;
+    --color-primary: #ca8bfe;
+    --color-secondary: #42a5f5;
+    --color-error: #ef5350;
+    --color-warn: #fac608;
+    --color-success: #66bb6a;
+}
+
+.dark {
+    --color-layout: #2e2e2e;
+    --color-bg: #171717;
+    --color-text: #ffffff;
+    --color-primary: #a18aff;
+    --color-secondary: #1565c0;
+    --color-error: #c62828;
+    --color-warn: #ffb74d;
+    --color-success: #388e3c;
+}

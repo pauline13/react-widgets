@@ -1,23 +1,25 @@
 import { Link } from 'react-router-dom';
 import { RoutePath } from '../../../shared/routeConfig/routeConfig';
+import ThemeSwitcher from '../../../shared/ui/ThemeSwitcher/ThemeSwitcher';
 
 const Navbar = () => {
     return (
-        <nav className="w-full h-[60px] z-10 shadow-md bg-gray-800 text-white min-w-[375px]">
-            <div className="flex justify-between items-center w-full h-full px-5 sm:px-10 md:px-30">
-                <Link to={RoutePath.home} className="font-bold hover:text-blue-300">
+        <nav className="w-[250px] m-2 rounded-xl z-10 bg-bgc text-text">
+            <div className="flex flex-col justify-between items-center pt-2">
+                <Link to={RoutePath.home} className="font-bold hover:text-primary">
                     Mini-Widgets
                 </Link>
-                <div className="flex justify-end space-x-4 sm:space-x-5">
-                    <Link to={RoutePath.home} className="hover:text-blue-300">
+                <div className="flex flex-col">
+                    <Link to={RoutePath.home} className="hover:text-primary">
                         Home
                     </Link>
-                    <Link to={RoutePath.notes} className="hover:text-blue-300">
+                    <Link to={RoutePath.notes} className="hover:text-primary">
                         Notes
                     </Link>
-                    <Link to={RoutePath.pokemons} className="hover:text-blue-300">
+                    <Link to={RoutePath.pokemons} className="hover:text-primary">
                         Pokemon
                     </Link>
+                    <ThemeSwitcher />
                 </div>
             </div>
         </nav>

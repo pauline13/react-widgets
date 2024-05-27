@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './app/styles/index.css';
 import App from './app/App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import 'material-icons/iconfont/material-icons.css';
-import { setupStore } from './app/providers/store';
+import { setupStore } from './app/store/store';
+import { ThemeProvider } from './app/providers/ThemeProvider';
 
 const store = setupStore();
 
@@ -12,8 +13,10 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <ThemeProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </ThemeProvider>
     </Provider>,
 );
