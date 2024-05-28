@@ -69,7 +69,7 @@ const PokeMain = () => {
                     {prevUrl && (
                         <Button
                             onClick={getPrevPage}
-                            theme={ButtonTheme.DELETE}
+                            theme={ButtonTheme.OUTLINE}
                             size={ButtonSize.M}
                         >
                             Previous
@@ -78,7 +78,7 @@ const PokeMain = () => {
                     {nextUrl && (
                         <Button
                             onClick={getNextPage}
-                            theme={ButtonTheme.DELETE}
+                            theme={ButtonTheme.OUTLINE}
                             size={ButtonSize.M}
                         >
                             Next

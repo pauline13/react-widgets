@@ -11,6 +11,7 @@ module.exports = {
                 error: 'var(--color-error)',
                 warn: 'var(--color-warn)',
                 success: 'var(--color-success)',
+                line: 'var(--color-line)',
             },
         },
     },

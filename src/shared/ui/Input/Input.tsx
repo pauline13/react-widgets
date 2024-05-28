@@ -17,14 +17,14 @@ const Input = (props: InputProps) => {
 
     return (
         <div className="w-full">
-            <label className="block text-gray-700 font-bold mb-2">{title}</label>
+            <label className="block text-text font-bold mb-2">{title}</label>
             <div className="">
                 <input
                     type={type}
                     value={value}
                     placeholder={placeholder}
                     onChange={onChangeHandler}
-                    className="mb-2 appearance-none border rounded-xl w-full p-2 text-gray-700 focus:outline-none"
+                    className="mb-2 bg-line appearance-none border-none rounded-xl w-full p-2 text-text focus:outline-none"
                 />
             </div>
         </div>

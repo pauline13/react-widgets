@@ -20,7 +20,7 @@ const NoteList = ({ notes }: NoteListProps) => {
                 <Reorder.Group values={items} onReorder={setItems}>
                     <div className="">
                         {items.map((note) => (
-                            <NoteItem key={note.id} note={note} />
+                            <NoteItem className="m-4 ml-0" key={note.id} note={note} />
                         ))}
                     </div>
                 </Reorder.Group>

@@ -13,7 +13,7 @@ const PokeCard = ({ pokemon, loading, infoPoke, className }: PokeCardProps) => {
                         onClick={() => {
                             infoPoke(poke);
                         }}
-                        className={`${className} flex items-center justify-between box-border w-[250px] rounded-xl p-4 bg-blue-200`}
+                        className={`${className} flex items-center justify-between box-border w-[250px] rounded-xl p-4 bg-primary text-text hover:cursor-pointer`}
                     >
                         <p>{poke.id}</p>
                         <img src={poke.sprites.front_default} alt="poke img" />

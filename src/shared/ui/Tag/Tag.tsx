@@ -5,9 +5,9 @@ export enum TagType {
 }
 
 const tagColors = {
-    [TagType.HIGH_PRIORITY]: 'bg-red-500',
-    [TagType.MEDIUM_PRIORITY]: 'bg-yellow-500',
-    [TagType.LOW_PRIORITY]: 'bg-green-500',
+    [TagType.HIGH_PRIORITY]: 'bg-error',
+    [TagType.MEDIUM_PRIORITY]: 'bg-warn',
+    [TagType.LOW_PRIORITY]: 'bg-success',
 };
 
 export const TagTypeText = {

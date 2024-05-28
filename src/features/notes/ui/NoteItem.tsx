@@ -31,13 +31,15 @@ const NoteItem = ({ className, note }: NoteItemProps) => {
             layout={true}
             drag={true}
         >
-            <div className={`${className} w-[290px] 1fr p-4 bg-bgc rounded-xl relative`}>
-                <p className="mb-8 m-1">{content}</p>
+            <div
+                className={`${className} w-[290px] 1fr p-4 border-[1px] bg-bgc border-line rounded-xl relative`}
+            >
+                <p className="mb-8 m-1 text-text">{content}</p>
                 {Array.isArray(tags) && tags.length > 0 && (
                     <Tag className="absolute bottom-0 left-0 m-2" color={tags[0]} />
                 )}
                 <ReorderIcon
-                    className="absolute top-0 right-0 m-2 text-white"
+                    className="absolute top-0 right-0 m-2 text-layout"
                     dragControls={dragControls}
                 />
                 <div className="absolute bottom-0 right-0 m-2">

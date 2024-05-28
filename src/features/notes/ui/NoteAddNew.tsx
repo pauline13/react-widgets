@@ -38,7 +38,7 @@ const NoteAddNew = () => {
     };
 
     return (
-        <div className="max-w-[288px] min-w-[250px] mb-4">
+        <div className="max-w-[288px] min-w-[250px] text-text mb-4">
             <Input
                 title="Новая заметка"
                 placeholder="Введите описание заметки"
@@ -58,7 +58,7 @@ const NoteAddNew = () => {
                     <label htmlFor={priority}>{TagTypeText[priority]}</label>
                 </div>
             ))}
-            {error && <span className="pt-1 text-xs text-red-500">{error}</span>}
+            {error && <span className="pt-1 text-xs text-error">{error}</span>}
 
             <Button
                 onClick={handleAddNote}

@@ -5,7 +5,7 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
         <>
             {data ? (
                 <>
-                    <div className="flex flex-col fixed items-center w-[300px] p-4 bg-blue-200 rounded-xl">
+                    <div className="flex flex-col fixed items-center w-[300px] p-4 bg-primary text-text rounded-xl">
                         <p className="mb-4 text-xl font-bold uppercase">{data.name}</p>
                         <img
                             className="w-[150px] h-[150px]"
@@ -15,18 +15,20 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
                         <div className="flex space-between w-full justify-center gap-2 mt-4">
                             {data.abilities.map((abilityItem) => (
                                 <div key={abilityItem.ability.name}>
-                                    <p className="p-1 bg-orange-200 rounded-lg">
+                                    <p className="font-medium p-1 bg-secondary rounded-lg">
                                         {abilityItem.ability.name}
                                     </p>
                                 </div>
                             ))}
                         </div>
-                        <div className="bg-white w-full rounded-xl p-4 mt-4">
+                        <div className="bg-white w-full text-black rounded-xl p-4 mt-4">
                             {data.stats.map((poke) => {
                                 return (
                                     <div key={poke.stat.name}>
                                         <p>
-                                            {poke.stat.name}:
+                                            <span className="font-medium">
+                                                {poke.stat.name}:{' '}
+                                            </span>
                                             <span className="pl-1">{poke.base_stat}</span>
                                         </p>
                                     </div>
