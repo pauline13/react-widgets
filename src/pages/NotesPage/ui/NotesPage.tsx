@@ -6,7 +6,7 @@ const NotesPage = () => {
     const { notes } = useAppSelector((state) => state.noteReducer);
 
     return (
-        <div className="h-screen">
+        <div className="">
             <NoteAddNew />
             <NoteList notes={notes} />
         </div>

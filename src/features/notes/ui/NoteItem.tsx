@@ -31,7 +31,7 @@ const NoteItem = ({ className, note }: NoteItemProps) => {
             layout={true}
             drag={true}
         >
-            <div className={`${className} 1fr p-4 bg-orange-200 rounded-xl relative`}>
+            <div className={`${className} w-[290px] 1fr p-4 bg-bgc rounded-xl relative`}>
                 <p className="mb-8 m-1">{content}</p>
                 {Array.isArray(tags) && tags.length > 0 && (
                     <Tag className="absolute bottom-0 left-0 m-2" color={tags[0]} />

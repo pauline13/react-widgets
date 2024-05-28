@@ -26,8 +26,8 @@ const Button: FC<ButtonProps> = ({
     ...otherProps
 }: ButtonProps) => {
     const themeClasses = {
-        [ButtonTheme.ADD]: 'bg-emerald-500',
-        [ButtonTheme.DELETE]: 'bg-red-500',
+        [ButtonTheme.ADD]: 'bg-success',
+        [ButtonTheme.DELETE]: 'bg-error',
         [ButtonTheme.OUTLINE]: 'bg-none outline outline-1 outline-gray-800 text-gray-800',
     };
 
@@ -42,7 +42,7 @@ const Button: FC<ButtonProps> = ({
 
     return (
         <button
-            className={`${className} flex items-center justify-center text-white 
+            className={`${className} flex items-center justify-center text-text 
         p-1 rounded-xl ${sizeClass} ${themeClass} 
         hover:bg-opacity-80 active:bg-opacity-60`}
             {...otherProps}

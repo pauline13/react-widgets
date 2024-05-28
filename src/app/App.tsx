@@ -1,3 +1,4 @@
+import PageWrapper from '../shared/ui/PageWrapper/PageWrapper';
 import Layout from '../widgets/Layout/ui/Layout';
 import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './router';
@@ -7,7 +8,9 @@ function App() {
     return (
         <div className={`${theme}`}>
             <Layout>
-                <AppRouter />
+                <PageWrapper>
+                    <AppRouter />
+                </PageWrapper>
             </Layout>
         </div>
     );

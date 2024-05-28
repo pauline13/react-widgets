@@ -14,22 +14,17 @@ const NoteList = ({ notes }: NoteListProps) => {
         setItems(notes);
     }, [notes]);
 
-    useEffect(() => {
-        console.log(
-            'Initial items:',
-            items.map((item) => item.id),
-        );
-    }, [items]);
-
     if (notes.length > 0) {
         return (
-            <Reorder.Group values={items} onReorder={setItems}>
-                <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-                    {items.map((note) => (
-                        <NoteItem key={note.id} note={note} />
-                    ))}
-                </div>
-            </Reorder.Group>
+            <div>
+                <Reorder.Group values={items} onReorder={setItems}>
+                    <div className="">
+                        {items.map((note) => (
+                            <NoteItem key={note.id} note={note} />
+                        ))}
+                    </div>
+                </Reorder.Group>
+            </div>
         );
     } else {
         return <div>No notes available</div>;

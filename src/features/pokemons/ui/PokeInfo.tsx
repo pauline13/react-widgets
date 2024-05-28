@@ -5,7 +5,7 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
         <>
             {data ? (
                 <>
-                    <div className="flex flex-col fixed items-center w-[300px] p-4 bg-blue-200 rounded-xl shadow-md">
+                    <div className="flex flex-col fixed items-center w-[300px] p-4 bg-blue-200 rounded-xl">
                         <p className="mb-4 text-xl font-bold uppercase">{data.name}</p>
                         <img
                             className="w-[150px] h-[150px]"
