@@ -2,7 +2,7 @@ import Button, { ButtonSize, ButtonTheme } from '../../../shared/ui/Button/Butto
 import { Icon } from '../../../shared/ui/Icon/Icon';
 import { removeNote } from '../model/NoteAction';
 import { useAppDispatch } from '../../../hooks/redux';
-import Tag from '../../../shared/ui/Tag/Tag';
+import Tag, { TagType } from '../../../shared/ui/Tag/Tag';
 import { Reorder, useDragControls } from 'framer-motion';
 import ReorderIcon from '../../../shared/ui/Icon/ReorderIcon';
 import { INote } from '../model/types';

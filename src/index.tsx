@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import 'material-icons/iconfont/material-icons.css';
 import { setupStore } from './app/store/store';
 import { ThemeProvider } from './app/providers/ThemeProvider';
+import './shared/config/i18n/i18n';
 
 const store = setupStore();
 

@@ -5,8 +5,10 @@ import { useState } from 'react';
 import { TagType, TagTypeText } from '../../../shared/ui/Tag/Tag';
 import Input from '../../../shared/ui/Input/Input';
 import { INote } from '../model/types';
+import { useTranslation } from 'react-i18next';
 
 const NoteAddNew = () => {
+    const { t } = useTranslation('notes');
     const { addNote } = noteActions;
     const dispatch = useAppDispatch();
 
@@ -40,12 +42,12 @@ const NoteAddNew = () => {
     return (
         <div className="max-w-[288px] min-w-[250px] text-text mb-4">
             <Input
-                title="Новая заметка"
-                placeholder="Введите описание заметки"
+                title={`${t('Новая заметка')}`}
+                placeholder={`${t('Описание заметки')}`}
                 value={note}
                 onChange={handleNoteChange}
             />
-            <p>Установите приоритет задачи</p>
+            <p>{t('Приоритет задачи')}</p>
             {Object.values(TagType).map((priority: TagType) => (
                 <div key={priority} className="pt-1">
                     <input
@@ -55,7 +57,7 @@ const NoteAddNew = () => {
                         checked={tagPriority === priority}
                         onChange={() => handleTagPriority(priority)}
                     />
-                    <label htmlFor={priority}>{TagTypeText[priority]}</label>
+                    <label htmlFor={priority}>{t(`tagTypeText.${priority}`)}</label>
                 </div>
             ))}
             {error && <span className="pt-1 text-xs text-error">{error}</span>}
@@ -65,7 +67,7 @@ const NoteAddNew = () => {
                 theme={ButtonTheme.ADD}
                 className="w-full mt-2"
             >
-                Добавить
+                {t('Добавить')}
             </Button>
         </div>
     );

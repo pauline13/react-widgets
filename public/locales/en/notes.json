@@ -1,0 +1,12 @@
+{
+    "Новая заметка": "New Note",
+    "Описание заметки": "Add description here",
+    "Приоритет задачи": "Set priority of the task",
+    "Ошибка": "Incorrect number of characters",
+    "Добавить": "Add Note",
+    "tagTypeText": {
+        "high_priority": "High",
+        "medium_priority": "Medium",
+        "low_priority": "Low"
+    }
+}

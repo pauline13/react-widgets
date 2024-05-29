@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { PokeInfoProps } from '../model/types';
 
 const PokeInfo = ({ data }: PokeInfoProps) => {
+    const { t } = useTranslation('pokemon');
+
     return (
         <>
             {data ? (
@@ -27,7 +30,7 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
                                     <div key={poke.stat.name}>
                                         <p>
                                             <span className="font-medium">
-                                                {poke.stat.name}:{' '}
+                                                {poke.stat.name}:
                                             </span>
                                             <span className="pl-1">{poke.base_stat}</span>
                                         </p>
@@ -38,7 +41,7 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
                     </div>
                 </>
             ) : (
-                <p className="text-lg">Choose a Pokemon</p>
+                <p className="text-lg">{t('Выберите Покемона')}</p>
             )}
         </>
     );

@@ -4,8 +4,11 @@ import Button, { ButtonTheme, ButtonSize } from '../../../shared/ui/Button/Butto
 import { Pokemon, PokeApiResponse } from '../model/types';
 import PokeCard from './PokeCard';
 import PokeInfo from './PokeInfo';
+import { useTranslation } from 'react-i18next';
 
 const PokeMain = () => {
+    const { t } = useTranslation('pokemon');
+
     const [pokeData, setPokeData] = useState<Pokemon[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [url, setUrl] = useState<string>('https://pokeapi.co/api/v2/pokemon/');
@@ -70,18 +73,18 @@ const PokeMain = () => {
                         <Button
                             onClick={getPrevPage}
                             theme={ButtonTheme.OUTLINE}
-                            size={ButtonSize.M}
+                            className="p-2"
                         >
-                            Previous
+                            {t('Предыдущая страница')}
                         </Button>
                     )}
                     {nextUrl && (
                         <Button
                             onClick={getNextPage}
                             theme={ButtonTheme.OUTLINE}
-                            size={ButtonSize.M}
+                            className="p-2"
                         >
-                            Next
+                            {t('Следующая страница')}
                         </Button>
                     )}
                 </div>
