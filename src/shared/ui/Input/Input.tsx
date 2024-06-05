@@ -24,7 +24,7 @@ const Input = (props: InputProps) => {
                     value={value}
                     placeholder={placeholder}
                     onChange={onChangeHandler}
-                    className="mb-2 bg-line appearance-none border-none rounded-xl w-full p-2 text-text focus:outline-none"
+                    className="mb-2 bg-bgc appearance-none border border-line rounded-xl w-full p-2 text-text focus:outline-primary"
                 />
             </div>
         </div>

@@ -6,6 +6,7 @@ import { TagType } from '../../../shared/ui/Tag/Tag';
 import Input from '../../../shared/ui/Input/Input';
 import { INote } from '../model/types';
 import { useTranslation } from 'react-i18next';
+import Checkbox from '../../../shared/ui/Checkbox/Checkbox';
 
 const NoteAddNew = () => {
     const { t } = useTranslation('notes');
@@ -50,14 +51,13 @@ const NoteAddNew = () => {
             <p>{t('Приоритет задачи')}</p>
             {Object.values(TagType).map((priority: TagType) => (
                 <div key={priority} className="pt-1">
-                    <input
-                        className="mr-2 "
-                        type="checkbox"
+                    <Checkbox
+                        className=""
                         id={priority}
-                        checked={tagPriority === priority}
+                        isChecked={tagPriority === priority}
                         onChange={() => handleTagPriority(priority)}
+                        label={t(`tagTypeText.${priority}`)}
                     />
-                    <label htmlFor={priority}>{t(`tagTypeText.${priority}`)}</label>
                 </div>
             ))}
             {error && <span className="pt-1 text-xs text-error">{error}</span>}
