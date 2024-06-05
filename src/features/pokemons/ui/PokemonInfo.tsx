@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { PokeInfoProps } from '../model/types';
+import { PokemonInfoProps } from '../model/types';
 
-const PokeInfo = ({ data }: PokeInfoProps) => {
+const PokemonInfo = ({ data }: PokemonInfoProps) => {
     const { t } = useTranslation('pokemon');
 
     return (
@@ -25,14 +25,16 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
                             ))}
                         </div>
                         <div className="bg-white w-full text-black rounded-xl p-4 mt-4">
-                            {data.stats.map((poke) => {
+                            {data.stats.map((pokemon) => {
                                 return (
-                                    <div key={poke.stat.name}>
+                                    <div key={pokemon.stat.name}>
                                         <p>
                                             <span className="font-medium">
-                                                {poke.stat.name}:
+                                                {pokemon.stat.name}:
                                             </span>
-                                            <span className="pl-1">{poke.base_stat}</span>
+                                            <span className="pl-1">
+                                                {pokemon.base_stat}
+                                            </span>
                                         </p>
                                     </div>
                                 );
@@ -47,4 +49,4 @@ const PokeInfo = ({ data }: PokeInfoProps) => {
     );
 };
 
-export default PokeInfo;
+export default PokemonInfo;

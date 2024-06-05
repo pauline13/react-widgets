@@ -26,7 +26,7 @@ export interface Pokemon {
     };
 }
 
-export interface PokeApiResponse {
+export interface PokemonApiResponse {
     next: string;
     previous: string;
     results: {
@@ -35,13 +35,13 @@ export interface PokeApiResponse {
     }[];
 }
 
-export interface PokeInfoProps {
+export interface PokemonInfoProps {
     data: Pokemon | null | undefined;
 }
 
-export interface PokeCardProps {
+export interface PokemonCardProps {
     pokemon: Pokemon[];
     loading: boolean;
-    infoPoke: (poke: Pokemon) => void;
+    infoPoke: (pokemon: Pokemon) => void;
     className?: string;
 }

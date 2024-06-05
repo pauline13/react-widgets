@@ -11,6 +11,7 @@ export const addTagToNote = createAction<{
     noteId: number;
     tag: TagType;
 }>('note/addTagToNote');
+
 export const removeTagFromNote = createAction<{
     noteId: number;
     tag: TagType;

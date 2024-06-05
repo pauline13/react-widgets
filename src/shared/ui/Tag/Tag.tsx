@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-
 export enum TagType {
     HIGH_PRIORITY = 'high_priority',
     MEDIUM_PRIORITY = 'medium_priority',
@@ -25,7 +23,6 @@ interface TagProps {
 }
 
 const Tag = ({ className, color, text }: TagProps) => {
-    const { t } = useTranslation('notes');
     const tagColorClass = tagColors[color] || tagColors[TagType.LOW_PRIORITY];
 
     return (

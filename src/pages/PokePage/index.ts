@@ -1,3 +1,3 @@
-import { PokePageLazy } from './ui/PokePage.lazy';
+import { PokemonPageLazy } from './ui/PokemonPage.lazy';
 
-export { PokePageLazy as PokePage };
+export { PokemonPageLazy as PokePage };

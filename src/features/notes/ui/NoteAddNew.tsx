@@ -2,7 +2,7 @@ import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { noteActions } from '../model/NoteSlice';
 import { useState } from 'react';
-import { TagType, TagTypeText } from '../../../shared/ui/Tag/Tag';
+import { TagType } from '../../../shared/ui/Tag/Tag';
 import Input from '../../../shared/ui/Input/Input';
 import { INote } from '../model/types';
 import { useTranslation } from 'react-i18next';

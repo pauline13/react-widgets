@@ -1,23 +1,23 @@
 import Loader from '../../../shared/ui/Loader/Loader';
-import { PokeCardProps } from '../model/types';
+import { PokemonCardProps } from '../model/types';
 
-const PokeCard = ({ pokemon, loading, infoPoke, className }: PokeCardProps) => {
+const PokeCard = ({ pokemon, loading, infoPoke, className }: PokemonCardProps) => {
     return (
         <>
             {loading ? (
                 <Loader />
             ) : (
-                pokemon.map((poke) => (
+                pokemon.map((pokemon) => (
                     <div
-                        key={poke.name}
+                        key={pokemon.name}
                         onClick={() => {
-                            infoPoke(poke);
+                            infoPoke(pokemon);
                         }}
                         className={`${className} flex items-center justify-between box-border w-[250px] rounded-xl p-4 bg-primary text-text hover:cursor-pointer`}
                     >
-                        <p>{poke.id}</p>
-                        <img src={poke.sprites.front_default} alt="poke img" />
-                        <p>{poke.name}</p>
+                        <p>{pokemon.id}</p>
+                        <img src={pokemon.sprites.front_default} alt="poke img" />
+                        <p>{pokemon.name}</p>
                     </div>
                 ))
             )}
