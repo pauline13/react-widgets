@@ -1,4 +1,5 @@
 import { ChangeEvent, FC } from 'react';
+import { Icon } from '../Icon/Icon';
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string;
@@ -13,14 +14,17 @@ const Checkbox: FC<CheckboxProps> = (props) => {
 
     return (
         <div className={`${className} flex items-center`}>
-            <input
-                type="checkbox"
-                id={id}
-                checked={isChecked}
-                onChange={onChange}
-                className={`appearance-none w-5 h-5 rounded-md cursor-pointer 
+            <div className="relative flex justify-center items-center w-5 h-5 select-none">
+                <input
+                    type="checkbox"
+                    id={id}
+                    checked={isChecked}
+                    onChange={onChange}
+                    className={`appearance-none w-full h-full rounded-md cursor-pointer 
                 border border-line checked:bg-primary checked:border-transparent`}
-            />
+                />
+                {isChecked && <Icon name="done" className="absolute text-white" />}
+            </div>
 
             {label && (
                 <label htmlFor={id} className="ml-2 cursor-pointer">
