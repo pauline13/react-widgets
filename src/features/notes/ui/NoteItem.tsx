@@ -5,12 +5,7 @@ import { useAppDispatch } from '../../../hooks/redux';
 import Tag from '../../../shared/ui/Tag/Tag';
 import { Reorder, useDragControls } from 'framer-motion';
 import ReorderIcon from '../../../shared/ui/Icon/ReorderIcon';
-import { INote } from '../model/types';
-
-interface NoteItemProps {
-    note: INote;
-    className?: string;
-}
+import { NoteItemProps } from '../model/types';
 
 const NoteItem = ({ className, note }: NoteItemProps) => {
     const { id, content, tags } = note;

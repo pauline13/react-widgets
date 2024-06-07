@@ -5,3 +5,12 @@ export interface INote {
     content: string;
     tags?: TagType[];
 }
+
+export interface NoteListProps {
+    notes: INote[];
+}
+
+export interface NoteItemProps {
+    note: INote;
+    className?: string;
+}
