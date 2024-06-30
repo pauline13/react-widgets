@@ -28,6 +28,7 @@ const Tag = ({ className, color, text }: TagProps) => {
     return (
         <div
             className={`${className} ${tagColorClass} h-6 w-6 rounded-xl flex justify-center`}
+            data-testid="tag-element"
         >
             <p className="text-white">{text}</p>
         </div>

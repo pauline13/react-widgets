@@ -11,11 +11,6 @@ const defaultTheme =
 const ThemeProvider: FC<ThemeProviderProprs> = ({ children }) => {
     const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-    // useEffect(() => {
-    //     document.body.classList.remove(Theme.LIGHT, Theme.DARK);
-    //     document.body.classList.add(theme);
-    // }, [theme]);
-
     useEffect(() => {
         setTheme(defaultTheme);
     }, []);
