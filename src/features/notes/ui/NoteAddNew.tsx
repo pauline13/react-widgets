@@ -1,12 +1,12 @@
-import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
-import { noteActions } from '../model/NoteSlice';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import Button, { ButtonTheme } from '@/shared/ui/Button/Button';
+import Checkbox from '@/shared/ui/Checkbox/Checkbox';
+import Input from '@/shared/ui/Input/Input';
+import { TagType } from '@/shared/ui/Tag/Tag';
 import { useState } from 'react';
-import { TagType } from '../../../shared/ui/Tag/Tag';
-import Input from '../../../shared/ui/Input/Input';
-import { INote } from '../model/types';
 import { useTranslation } from 'react-i18next';
-import Checkbox from '../../../shared/ui/Checkbox/Checkbox';
+import { noteActions } from '../model/NoteSlice';
+import { INote } from '../model/types';
 
 const NoteAddNew = () => {
     const { t } = useTranslation('notes');

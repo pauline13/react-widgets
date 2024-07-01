@@ -1,5 +1,5 @@
-import PageWrapper from '../shared/ui/PageWrapper/PageWrapper';
-import Layout from '../widgets/Layout/ui/Layout';
+import PageWrapper from '@/shared/ui/PageWrapper/PageWrapper';
+import Layout from '@/widgets/Layout/ui/Layout';
 import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './router';
 

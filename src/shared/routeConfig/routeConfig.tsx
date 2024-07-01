@@ -1,8 +1,8 @@
+import HomePage from '@/pages/HomePage/HomePage';
+import { NotesPage } from '@/pages/NotesPage';
+import { PokePage } from '@/pages/PokePage';
+import PageError from '@/widgets/PageError/ui/PageError';
 import { RouteProps } from 'react-router-dom';
-import HomePage from '../../pages/HomePage/HomePage';
-import { NotesPage } from '../../pages/NotesPage';
-import { PokePage } from '../../pages/PokePage';
-import PageError from '../../widgets/PageError/ui/PageError';
 
 export enum AppRoutes {
     HOME = 'home',

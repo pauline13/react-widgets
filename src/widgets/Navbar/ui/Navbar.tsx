@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { RoutePath } from '../../../shared/routeConfig/routeConfig';
-import ThemeSwitcher from '../../../shared/ui/ThemeSwitcher/ThemeSwitcher';
+import { RoutePath } from '@/shared/routeConfig/routeConfig';
+import LanguageSwitcher from '@/shared/ui/LanguageSwitcher/LanguageSwitcher';
+import ThemeSwitcher from '@/shared/ui/ThemeSwitcher/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '../../../shared/ui/LanguageSwitcher/LanguageSwitcher';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const { t } = useTranslation('translation');

@@ -1,10 +1,10 @@
-import Button, { ButtonSize, ButtonTheme } from '../../../shared/ui/Button/Button';
-import { Icon } from '../../../shared/ui/Icon/Icon';
+import { useAppDispatch } from '@/hooks/redux';
+import Button, { ButtonTheme, ButtonSize } from '@/shared/ui/Button/Button';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import ReorderIcon from '@/shared/ui/Icon/ReorderIcon';
+import Tag from '@/shared/ui/Tag/Tag';
+import { useDragControls, Reorder } from 'framer-motion';
 import { removeNote } from '../model/NoteAction';
-import { useAppDispatch } from '../../../hooks/redux';
-import Tag from '../../../shared/ui/Tag/Tag';
-import { Reorder, useDragControls } from 'framer-motion';
-import ReorderIcon from '../../../shared/ui/Icon/ReorderIcon';
 import { NoteItemProps } from '../model/types';
 
 const NoteItem = ({ className, note }: NoteItemProps) => {

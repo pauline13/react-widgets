@@ -1,4 +1,4 @@
-import PokemonMain from '../../../features/pokemons/ui/PokemonMain';
+import PokemonMain from '@/features/pokemons/ui/PokemonMain';
 
 const PokemonPage = () => {
     return (

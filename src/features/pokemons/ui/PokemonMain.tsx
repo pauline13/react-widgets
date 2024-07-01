@@ -1,12 +1,12 @@
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import Button, { ButtonTheme } from '@/shared/ui/Button/Button';
 import { useEffect } from 'react';
-import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
-import PokemonCard from './PokemonCard';
-import PokemonInfo from './PokemonInfo';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { loadPokemons } from '../model/PokemonAction';
 import { pokemonActions } from '../model/PokemonSlice';
 import { Pokemon } from '../model/types';
+import PokemonCard from './PokemonCard';
+import PokemonInfo from './PokemonInfo';
 
 const PokemonMain = () => {
     const { t } = useTranslation('pokemon');

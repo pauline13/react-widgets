@@ -1,7 +1,7 @@
 import { Reorder } from 'framer-motion';
-import NoteItem from './NoteItem';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NoteListProps } from '../model/types';
+import NoteItem from './NoteItem';
 
 const NoteList = ({ notes }: NoteListProps) => {
     const [items, setItems] = useState(notes);

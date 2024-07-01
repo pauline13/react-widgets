@@ -1,6 +1,6 @@
+import { RoutePath } from '@/shared/routeConfig/routeConfig';
+import Button, { ButtonTheme } from '@/shared/ui/Button/Button';
 import { Link } from 'react-router-dom';
-import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
-import { RoutePath } from '../../../shared/routeConfig/routeConfig';
 
 interface PageErrorProps {
     className?: string;
