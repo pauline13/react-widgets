@@ -1,10 +1,10 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/redux';
-import Button, { ButtonTheme } from '@/shared/ui/Button/Button';
-import Checkbox from '@/shared/ui/Checkbox/Checkbox';
-import Input from '@/shared/ui/Input/Input';
-import { TagType } from '@/shared/ui/Tag/Tag';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
+import Checkbox from '../../../shared/ui/Checkbox/Checkbox';
+import Input from '../../../shared/ui/Input/Input';
+import { TagType } from '../../../shared/ui/Tag/Tag';
 import { noteActions } from '../model/NoteSlice';
 import { INote } from '../model/types';
 

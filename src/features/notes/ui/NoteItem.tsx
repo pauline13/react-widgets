@@ -1,9 +1,9 @@
-import { useAppDispatch } from '@/hooks/redux';
-import Button, { ButtonTheme, ButtonSize } from '@/shared/ui/Button/Button';
-import { Icon } from '@/shared/ui/Icon/Icon';
-import ReorderIcon from '@/shared/ui/Icon/ReorderIcon';
-import Tag from '@/shared/ui/Tag/Tag';
 import { useDragControls, Reorder } from 'framer-motion';
+import { useAppDispatch } from '../../../hooks/redux';
+import Button, { ButtonTheme, ButtonSize } from '../../../shared/ui/Button/Button';
+import { Icon } from '../../../shared/ui/Icon/Icon';
+import ReorderIcon from '../../../shared/ui/Icon/ReorderIcon';
+import Tag from '../../../shared/ui/Tag/Tag';
 import { removeNote } from '../model/NoteAction';
 import { NoteItemProps } from '../model/types';
 

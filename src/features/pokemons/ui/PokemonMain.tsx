@@ -1,7 +1,7 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/redux';
-import Button, { ButtonTheme } from '@/shared/ui/Button/Button';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import Button, { ButtonTheme } from '../../../shared/ui/Button/Button';
 import { loadPokemons } from '../model/PokemonAction';
 import { pokemonActions } from '../model/PokemonSlice';
 import { Pokemon } from '../model/types';
