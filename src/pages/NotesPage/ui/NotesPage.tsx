@@ -4,6 +4,7 @@ import { useAppSelector } from '@/hooks/redux';
 
 const NotesPage = () => {
     const { notes } = useAppSelector((state) => state.noteReducer);
+    // test
 
     return (
         <div className="">
